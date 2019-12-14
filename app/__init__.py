@@ -11,9 +11,9 @@ import os
 from flask_redis import FlaskRedis
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+mysqlconnector://root:root@127.0.0.5/movie"
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://pzhbao:pzhbao@localhost/checkpoint"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS	"] = True
-app.config["REDIS_URL"] = "redis://192.168.232.1:6379/0"
+app.config["REDIS_URL"] = "redis://localhost:6379/0"
 app.config["SECRET_KEY"] = "movie_licheetools_top"
 app.config["UP_DIR"] = os.path.join(os.path.abspath(os.path.dirname(__file__)), "static/uploads/")
 app.config["FC_DIR"] = os.path.join(os.path.abspath(os.path.dirname(__file__)), "static/uploads/users/")
